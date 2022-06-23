@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.a20220622juanmartinezleonnycschools.view.Fragments.SearchFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.a20220622juanmartinezleonnycschools.view.Fragments.SchoolListFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.a20220622juanmartinezleonnycschools.view.Fragments.DetailsFragment">
+    </fragment>
+
+    <action
+        android:id="@+id/action_list_to_school_details"
+        app:destination="@id/detailsFragment"
+        >
+        <argument
+            android:name="school"
+            app:argType="com.example.a20220622juanmartinezleonnycschools.model.School" />
+
+    </action>
+
+    <action
+        android:id="@+id/action_search_to_list"
+        app:destination="@id/listFragment"
+        >
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+
+    </action>
+</navigation>
